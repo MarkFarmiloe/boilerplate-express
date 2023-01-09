@@ -12,7 +12,7 @@ console.log('hello world');
 
 app.get("/", (req,res) => {
     res.sendFile(`${__dirname}/views/index.html`)
-})
+});
 
 app.get("/json", (req, res) => {
     const mySecret = process.env['MESSAGE_STYLE'];
@@ -23,7 +23,7 @@ app.get("/json", (req, res) => {
         response = "Hello json"
       }
       res.json({message: response})
-})
+});
 
 
 
