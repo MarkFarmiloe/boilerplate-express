@@ -1,5 +1,6 @@
 let express = require('express');
 let app = express();
+require('dotenv').config();
 
 // Normal usage
 app.use(express.static(__dirname + "/public"));
@@ -14,7 +15,10 @@ app.get("/", (req,res) => {
 })
 
 app.get("/json", (req, res) => {
-    res.json({message: 'Hello json'})
+    var response = "Hello World".toUpperCase(); // now becomes "HELLO WORLD"
+    process.env.MESSAGE_STYLE;
+    res.json({message: response})
+
 })
 
 
