@@ -16,11 +16,11 @@ app.get("/", (req,res) => {
 
 app.get("/json", (req, res) => {
     const mySecret = process.env['MESSAGE_STYLE'];
-    var response = "Hello json".toUpperCase(); // now becomes "HELLO WORLD"
+    var response = "Hello json".toUpperCase(); 
     if (mySecret === "uppercase") {
         response = "Hello json".toUpperCase();
       } else {
-        response = "Hello JSON"
+        response = "Hello json"
       }
       res.json({message: response})
 })
