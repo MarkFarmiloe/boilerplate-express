@@ -16,16 +16,16 @@ app.get("/", (req,res) => {
 });
 
 
-app.get("/json", (req, res) =>{
+app.get("/json", (req, res) => {
   const mySecret = process.env['MESSAGE_STYLE'];
-  if(mySecret == 'uppercase'){
+  console.log(mySecret)
+  if(mySecret === 'uppercase'){
     res.json({message: 'HELLO JSON'})
+    console.log('HELLO JSON')
   } else{
     res.json({message: 'Hello json'})
+    console.log('hello json')
   }
 })
      
-
-
-
  module.exports = app;
