@@ -1,6 +1,7 @@
 let express = require('express');
 let app = express();
-require('dotenv').config();
+require('dotenv').config()
+
 
 // Normal usage
 app.use(express.static(__dirname + "/public"));
@@ -24,38 +25,6 @@ app.get("/json", (req, res) => {
       }
       res.json({message: response})
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
  module.exports = app;
